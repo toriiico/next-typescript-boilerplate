@@ -3,9 +3,12 @@ import { GetStaticProps } from "next"
 import Link from "next/link"
 import Head from "next/head"
 
-import Layout, { siteTitle } from "@src/components/layout"
-import Date from "@src/components/date"
+import { Layout } from "@src/components/environments/core/Layout"
+import { Date } from "@src/components/atoms/Date"
+
+import { SITE_TITLE } from "@src/lib/configs"
 import { getSortedPostsData } from "@src/lib/posts"
+
 import utilStyles from "@src/styles/utils.module.scss"
 
 export default function Home({
@@ -16,11 +19,11 @@ export default function Home({
     title: string
     id: string
   }[]
-}): JSX.Element {
+}) {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{SITE_TITLE}</title>
       </Head>
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
