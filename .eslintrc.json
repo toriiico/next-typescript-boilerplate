@@ -18,14 +18,42 @@
     "react-hooks/exhaustive-deps": "warn",
     "import/no-unresolved": "off",
     "import/named": "off",
+    // for Next.js.
     "jsx-a11y/anchor-is-valid": "off",
 
     "camelcase": "off",
     "@typescript-eslint/camelcase": "off",
 
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": "off"
+    "@typescript-eslint/no-use-before-define": "off",
+
+    // Ignores redundant type definitions.
+    "explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "warn",
+      {
+        "allowExpressions": true
+      }
+    ],
+
+    // It is convenient to leave the argument information, so leave the definition even if it is unused.
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "args": "none"
+      }
+    ]
   },
+  "overrides": [
+    {
+      // Disable unnessesary retrun type.
+      "files": ["src/components/**.tsx", "src/pages/**.tsx", "src/pages/api/**.ts"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off"
+      }
+    }
+  ],
   "plugins": ["react", "import", "jsx-a11y", "prettier", "react-hooks", "@typescript-eslint"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -45,6 +73,7 @@
   "settings": {
     "import/resolver": {
       "node": {
+        "moduleDirectory": ["node_modules", "src"],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     },
