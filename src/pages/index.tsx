@@ -3,7 +3,7 @@ import { GetStaticProps } from "next"
 import Link from "next/link"
 import Head from "next/head"
 
-import { Layout } from "@src/components/environments/core/Layout"
+import { Layout } from "@src/components/environments/common"
 import { Date } from "@src/components/atoms/Date"
 
 import { SITE_TITLE } from "@src/lib/configs"

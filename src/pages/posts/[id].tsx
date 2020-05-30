@@ -2,7 +2,7 @@ import React from "react"
 import { GetStaticProps, GetStaticPaths } from "next"
 import Head from "next/head"
 
-import { Layout } from "@src/components/environments/core"
+import { Layout } from "@src/components/environments/common"
 import { getAllPostIds, getPostData } from "@src/lib/posts"
 import { Date } from "@src/components/atoms/Date"
 import utilStyles from "@src/styles/utils.module.scss"
