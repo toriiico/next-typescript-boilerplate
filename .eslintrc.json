@@ -52,6 +52,13 @@
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "off"
       }
+    },
+    {
+      // Disable unnessesary explicit any.
+      "files": ["src/global.d.ts"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off"
+      }
     }
   ],
   "plugins": ["react", "import", "jsx-a11y", "prettier", "react-hooks", "@typescript-eslint"],
