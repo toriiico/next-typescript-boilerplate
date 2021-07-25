@@ -1,5 +1,5 @@
 {
-  "cSpell.words": [],
+  "cSpell.words": ["stylelint"],
 
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 
